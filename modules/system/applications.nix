@@ -10,6 +10,11 @@ in
 
 {
   options = {
+    system.copyApplications = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Whether to copy the applications.";
+    };
   };
 
   config = {
@@ -20,7 +25,7 @@ in
       pathsToLink = "/Applications";
     };
 
-    system.activationScripts.applications.text = ''
+    system.activationScripts.applications.text = optionalString cfg.copyApplications ''
       # Set up applications.
       echo "setting up ~/Applications..." >&2
 
