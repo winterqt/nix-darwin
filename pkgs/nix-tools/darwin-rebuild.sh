@@ -206,3 +206,9 @@ if [ "$action" = check ]; then
   export checkActivation=1
   "$systemConfig/activate-user"
 fi
+
+if [ -n "$flake" ]; then
+  if [ "$action" = switch ] || [ "$action" = check ]; then
+    rm ./result
+  fi
+fi
