@@ -1,3 +1,9 @@
+Hi, traveller!
+
+This is my fork of nix-darwin that includes personal choices that either aren't appropriate for or aren't merged yet to upstream. Use at your own risk!
+
+---
+
 [<img src="https://lnl7.github.io/nix-darwin/images/nix-darwin.png" width="200px" alt="logo" />](https://github.com/LnL7/nix-darwin)
 
 # nix-darwin
