@@ -28,7 +28,7 @@ in
 
   config = {
 
-    system.build.fonts = pkgs.runCommandNoCC "fonts"
+    system.build.fonts = pkgs.runCommand "fonts"
       { paths = cfg.fonts; preferLocalBuild = true; }
       ''
         mkdir -p $out/Library/Fonts

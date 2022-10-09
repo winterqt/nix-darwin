@@ -84,7 +84,7 @@ in
 
   config = {
 
-    system.build.launchd = pkgs.runCommandNoCC "launchd"
+    system.build.launchd = pkgs.runCommand "launchd"
       { preferLocalBuild = true; }
       ''
         mkdir -p $out/Library/LaunchAgents $out/Library/LaunchDaemons $out/user/Library/LaunchAgents

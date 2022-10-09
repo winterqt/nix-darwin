@@ -12,7 +12,7 @@ let
         profile = mkOption {
           type = types.lines;
           internal = true;
-          apply = text: pkgs.runCommandNoCC "sandbox.sb" {} ''
+          apply = text: pkgs.runCommand "sandbox.sb" {} ''
             for f in $(< ${config.closure}/store-paths); do
                 storePaths+="(subpath \"$f\")"
             done

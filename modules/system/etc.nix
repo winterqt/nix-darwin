@@ -31,7 +31,7 @@ in
 
   config = {
 
-    system.build.etc = pkgs.runCommandNoCC "etc"
+    system.build.etc = pkgs.runCommand "etc"
       { preferLocalBuild = true; }
       ''
         mkdir -p $out/etc

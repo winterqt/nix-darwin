@@ -15,7 +15,7 @@ let
       sh = pkgs.stdenv.shell;
       binshDeps = pkgs.writeReferencesToFile sh;
     in
-      pkgs.runCommandNoCC "nix.conf"
+      pkgs.runCommand "nix.conf"
         { preferLocalBuild = true; extraOptions = cfg.extraOptions; }
         ''
           cat > $out <<END
